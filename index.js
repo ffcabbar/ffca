@@ -16,7 +16,7 @@ const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 let visitorName;
 
 async function welcome() {
-  const audic = new Audic("./strange-hip-hop-beat-9699.mp3");
+  const audic = new Audic("./retro-game-music.mp3");
   await audic.play();
   await getPhoto();
 
