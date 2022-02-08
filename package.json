@@ -1,6 +1,6 @@
 {
   "name": "ffca",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple cli for fun",
   "main": "index.js",
   "repository": {
@@ -21,7 +21,6 @@
   "license": "MIT",
   "homepage": "https://github.com/ffcabbar/ffca",
   "dependencies": {
-    "audic": "^3.0.0",
     "axios": "^0.25.0",
     "blessed": "^0.1.81",
     "blessed-contrib": "^4.10.1",

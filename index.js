@@ -4,7 +4,6 @@ import inquirer from "inquirer";
 import gradient from "gradient-string";
 import chalkAnimation from "chalk-animation";
 import figlet from "figlet";
-import Audic from "audic";
 import { getPhoto } from "./api.js";
 import link from "terminal-link";
 import blessed from "blessed";
@@ -16,15 +15,10 @@ const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 let visitorName;
 
 async function welcome() {
-  const audic = new Audic("./retro-game-music.mp3");
-  await audic.play();
   await getPhoto();
-
   const title = chalkAnimation.karaoke("Hello, this is Furkan!\n", 1);
-
   await sleep();
   title.stop();
-
   console.log(`
   I'm a software developer who loves front-end technologies. 
   Currently, I'm working for ${link(chalk.hex('#0870d8').bold('GE'), "https://www.ge.com")} and living in Istanbul, Turkey. 
@@ -104,7 +98,7 @@ async function drawMap() {
     smartCSR: true,
   });
   const map = contrib.map({
-    label: `The red one is my current location. Yellows are places I would love to see and explore. Press ESC or Q to exit.`,
+    label: `The yellow one is my current location. Reds are places I would love to see and explore. Press ESC or Q to exit.`,
   });
   screen.append(map);
   map.addMarker({ lon: "28.9784", lat: "41.0082", color: "yellow" });
